@@ -60,16 +60,6 @@ public class Game : MonoBehaviour
             tower.DestroyTower();
             ShiftedClick();  
         }
-        else
-        {
-            Blocks block = GetBlocks(TouchRay);
-            if (block!=null)
-            {
-                block.createTower = false;
-            }
-        }
-
-
     }
 
     public Blocks GetBlocks(Ray ray)
