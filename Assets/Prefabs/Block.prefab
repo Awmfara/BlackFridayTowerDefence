@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5594146784813503789}
   - component: {fileID: 5594146784813503788}
   - component: {fileID: 5817183320197602777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Block
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 0}
+  tower: {fileID: 0}
   createTower: 0
   prefabTower: {fileID: 3338187029107549203, guid: 9064f5f569664784588d4cd0b90e7fbd,
     type: 3}
+  dist: 0

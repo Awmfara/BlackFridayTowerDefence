@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5287403835124173045}
   - component: {fileID: 780304671524968379}
   - component: {fileID: 2769772830868376429}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,10 +102,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5742617945845821716}
-  - component: {fileID: -8955585198390455509}
-  m_Layer: 0
+  - component: {fileID: -5060572157490785351}
+  - component: {fileID: 7371031386887156798}
+  m_Layer: 9
   m_Name: BlankTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +127,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-8955585198390455509
+--- !u!114 &-5060572157490785351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,10 +136,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3338187029107549203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74a71c6adde48a644b951079a31a21fc, type: 3}
+  m_Script: {fileID: 11500000, guid: b40c771a1736578428d12a111dc60d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerCost: 0
+  blockNumber: 0
+--- !u!65 &7371031386887156798
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3338187029107549203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!1001 &1673354996422749286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -205,6 +219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TowerBase
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053257939593552973, guid: d4abbd184fc9c134193e9ce605a7e32d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4abbd184fc9c134193e9ce605a7e32d, type: 3}
