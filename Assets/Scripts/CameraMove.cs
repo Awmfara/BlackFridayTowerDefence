@@ -11,6 +11,7 @@ public class CameraMove : MonoBehaviour
     Vector3 startingPosition = default;
     private Vector3 dragOrigin;
 
+
     private float currentZoom = default;
 
     private void Start()
@@ -23,7 +24,7 @@ public class CameraMove : MonoBehaviour
     {
         currentZoom = transform.position.z;
         currentZoom -= currentZoom + Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
-        
+
         if (Input.GetKey(KeyCode.X))
         {
             transform.position = startingPosition;
@@ -36,14 +37,20 @@ public class CameraMove : MonoBehaviour
         }
         if (!Input.GetMouseButton(1))
         {
-            // transform.Translate(new Vector3(transform.position.x, currentZoom, transform.position.y), Space.World);
             return;
         }
         Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
+
+
         Vector3 move = new Vector3(-pos.x * dragSpeed, currentZoom, -pos.y * dragSpeed);
         transform.Translate(move, Space.World);
+        transform.position = new Vector3
+                (Mathf.Clamp(transform.position.x, -20, 20),
+                 Mathf.Clamp(transform.position.y, 0, 150),
+                 Mathf.Clamp(transform.position.z, -100, -9));
 
-       
+
+
 
 
     }

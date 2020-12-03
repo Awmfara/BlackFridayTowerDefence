@@ -218,8 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592c8aec95462ad4195928109718d436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSpeed: 20
-  zoomSpeed: 20
+  dragSpeed: 5
+  zoomSpeed: 40
 --- !u!1 &1342872888
 GameObject:
   m_ObjectHideFlags: 0
